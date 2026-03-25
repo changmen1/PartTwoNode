@@ -32,11 +32,11 @@
 
 ## 第二部分
 
-- [ ] 00:00 简介与演示
-- [ ] 05:13 赞助商 —— Hostinger VPS 托管概览
-- [ ] 08:23 事件循环 (Event Loop)
-- [ ] 19:15 缓冲区 (Buffers)
-- [ ] 27:25 Node.js 流 (Streams)
+- [√] 00:00 简介与演示
+- [√] 05:13 赞助商 —— Hostinger VPS 托管概览
+- [√] 08:23 事件循环 (Event Loop)
+- [√] 19:15 缓冲区 (Buffers)
+- [√] 27:25 Node.js 流 (Streams)
 - [ ] 43:15 Express.js 核心概念
 - [ ] 01:37:58 Redis
 - [ ] 02:56:54 Node.js 微服务
