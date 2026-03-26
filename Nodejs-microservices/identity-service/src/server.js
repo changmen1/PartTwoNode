@@ -44,7 +44,10 @@ const rateLimiter = new RateLimiterRedis({
 app.use((req, res, next) => {
     rateLimiter
         .consume(req.ip)
-        .then(() => next())
+        .then(() => {
+            logger.info(`DDoS检查通过: ${req.ip}`);
+            next();
+        })
         .catch(() => {
             logger.warn(`这个蛋蛋请求频率的太快了 IP: ${req.ip}`);
             res.status(429).json({ success: false, message: "蛋蛋请求那么快干撒嘛哎呀~" });
