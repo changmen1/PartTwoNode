@@ -38,7 +38,7 @@
 - [√] 19:15 缓冲区 (Buffers)
 - [√] 27:25 Node.js 流 (Streams)
 - [√] 43:15 Express.js 核心概念
-- [ ] 01:37:58 Redis
+- [√] 01:37:58 Redis
 - [ ] 02:56:54 Node.js 微服务
 - [ ] 08:50:15 Docker
 - [ ] 09:08:50 Hostinger VPS 托管实战
@@ -133,5 +133,6 @@ in
 图片存储使用cloudinary
 后端部署使用Render || vercel 建议使用Render
 openssl rand -hex 64
+0.0.0.0/0
 https://res.cloudinary.com/dffsqesb0/image/upload/f_auto,q_auto/zxl_l4ucfq
 -->
