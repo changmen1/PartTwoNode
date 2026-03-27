@@ -134,5 +134,12 @@ in
 后端部署使用Render || vercel 建议使用Render
 openssl rand -hex 64
 0.0.0.0/0
+200：一切正常。
+201：资源创建成功（比如注册成功）。
+400：前端传参错了（Joi 校验失败）。
+401：没登录或 Token 过期。
+403：登录了但没权限。
+429：请求太快（你代码里的限流）。
+500：后端代码崩溃了。
 https://res.cloudinary.com/dffsqesb0/image/upload/f_auto,q_auto/zxl_l4ucfq
 -->

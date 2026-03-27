@@ -73,12 +73,27 @@ app.use(
     })
 );
 
+// 设置 Python 子模块的代理
+app.use(
+    "/v1/profile",
+    proxy(process.env.PYTHON_SERVICE_URL, {
+        ...proxyOptions,
+        userResDecorator: (proxyRes, proxyResData, userReq, userRes) => {
+            logger.info(`收到来自 Python 服务的响应: ${proxyRes.statusCode}`);
+            return proxyResData;
+        },
+    })
+);
+
 app.use(errorHandler);
 
 app.listen(PORT, () => {
     logger.info(`API Gateway is running on port ${PORT}`);
     logger.info(
         `Identity service is running on port ${process.env.IDENTITY_SERVICE_URL}`
+    );
+    logger.info(
+        `Python服务启动在 port ${process.env.PYTHON_SERVICE_URL}`
     );
     logger.info(`Redis Url ${process.env.REDIS_URL}`);
 });
