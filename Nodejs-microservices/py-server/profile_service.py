@@ -2,16 +2,14 @@ from flask import Flask, jsonify, request
 
 app = Flask(__name__)
 
-# 模拟数据库
 users_profiles = {
-    "1": {"name": "张三", "bio": "Node.js 爱好者", "avatar": "https://example.com/1.jpg"},
-    "2": {"name": "李四", "bio": "Python 大师", "avatar": "https://example.com/2.jpg"}
+    "1": {"name": "朱昕龙", "bio": "Node.js 大师", "avatar": "https://example.com/1.jpg"},
+    "2": {"name": "张无忌", "bio": "Python 爱好者", "avatar": "https://example.com/2.jpg"}
 }
 
 @app.route('/api/profile/<user_id>', methods=['GET'])
 def get_profile(user_id):
     print(f"Python 收到请求路径: {request.path}")
-    # 模拟从“数据库”获取数据
     profile = users_profiles.get(user_id)
     
     if profile:

@@ -54,7 +54,7 @@ const proxyOptions = {
     },
 };
 
-//setting up proxy for our identity service
+// 设置 身份服务 代理
 app.use(
     "/v1/auth",
     proxy(process.env.IDENTITY_SERVICE_URL, {
@@ -73,7 +73,7 @@ app.use(
     })
 );
 
-// 设置 Python 子模块的代理
+// 设置 Python服务 代理
 app.use(
     "/v1/profile",
     proxy(process.env.PYTHON_SERVICE_URL, {
