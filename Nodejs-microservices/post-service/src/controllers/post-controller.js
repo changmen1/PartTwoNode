@@ -1,5 +1,6 @@
 const Post = require("../models/Post");
 const logger = require("../utils/logger");
+const { publishEvent } = require("../utils/rabbitmq");
 const { validateCreatePost } = require("../utils/validation");
 
 /**
@@ -143,17 +144,27 @@ const getPost = async (req, res) => {
 
 const deletePost = async (req, res) => {
     try {
+        console.log('>>>>>>>>>>>删除', req.params.id)
         const post = await Post.findOneAndDelete({
             _id: req.params.id,
             user: req.user.userId,
         });
 
+
         if (!post) {
+            console.log("进入404了", post)
             return res.status(404).json({
                 message: "Post not found",
                 success: false,
             });
         }
+
+        // publish post delete method
+        await publishEvent("post.deleted", {
+            postId: post._id.toString(),
+            userId: req.user.userId,
+            mediaIds: post.mediaIds
+        })
 
         await invalidatePostCache(req, req.params.id);
         res.json({

@@ -142,4 +142,12 @@ openssl rand -hex 64
 429：请求太快（你代码里的限流）。
 500：后端代码崩溃了。
 https://res.cloudinary.com/dffsqesb0/image/upload/f_auto,q_auto/zxl_l4ucfq
+7:28:12
+
+星球大战项目
+登陆注册(可以参与数据天梯排位)
+1V1 PK模式(socket实现 根据天梯分数进行匹配) 同时进入游戏
+商城 购买英雄
+金币系统 每一局游戏固定或得10金币
+英雄 皮肤功能(对接支付宝)
 -->
