@@ -39,7 +39,7 @@
 - [√] 27:25 Node.js 流 (Streams)
 - [√] 43:15 Express.js 核心概念
 - [√] 01:37:58 Redis
-- [ ] 02:56:54 Node.js 微服务
+- [√] 02:56:54 Node.js 微服务
 - [ ] 08:50:15 Docker
 - [ ] 09:08:50 Hostinger VPS 托管实战
 - [ ] 09:42:12 使用 GitHub Actions 实现 CI/CD
