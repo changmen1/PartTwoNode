@@ -40,9 +40,9 @@
 - [√] 43:15 Express.js 核心概念
 - [√] 01:37:58 Redis
 - [√] 02:56:54 Node.js 微服务
-- [ ] 08:50:15 Docker
-- [ ] 09:08:50 Hostinger VPS 托管实战
-- [ ] 09:42:12 使用 GitHub Actions 实现 CI/CD
+- [√] 08:50:15 Docker
+- [√] 09:08:50 Hostinger VPS 托管实战
+- [√] 09:42:12 使用 GitHub Actions 实现 CI/CD
 
 ---
 
@@ -142,7 +142,15 @@ openssl rand -hex 64
 429：请求太快（你代码里的限流）。
 500：后端代码崩溃了。
 https://res.cloudinary.com/dffsqesb0/image/upload/f_auto,q_auto/zxl_l4ucfq
-7:28:12
+
+pm2 docker
+sudo docker compose build
+docker compose up
+docker ps
+docker builder prune -f
+docker-compose logs api-gateway
+HTTP_PROXY="http://127.0.0.1:7890"
+HTTPS_PROXY="http://127.0.0.1:7890"
 
 星球大战项目
 登陆注册(可以参与数据天梯排位)
